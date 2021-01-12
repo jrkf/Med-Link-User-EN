@@ -1,0 +1,36 @@
+<ActionBar class="action-bar" >
+  <NavigationButton icon="res://ic_arrow_back_black_24dp"></NavigationButton>
+  <ActionItem (tap)="addBolus()"
+              android.systemIcon="btn_plus" android.position="popup" text="SET BOLUS">
+  </ActionItem>
+    <ActionItem (tap)="addProfile()"
+                android.systemIcon="btn_dropdown"  android.position="popup" text="SET / DELETE PUMP USER">
+    </ActionItem>
+  <ActionItem (tap)="refreshCalc()"
+              android.systemIcon="btn_dropdown"  android.position="popup" text="REFRESH BOLUS WIZARD SETTINGS">
+  </ActionItem>
+  <Label class="action-bar-title" text="Pump actions"></Label>
+</ActionBar>
+<ScrollView>
+<StackLayout class="page page-content">
+  <Button class="btn btn-primary btn-active" id="button2" text="Bluetooth scan for Med-Link" (tap)="scan()"></Button>
+  <Label id="lbl" class="h3 p-15 text-center" [text]="uuid" textWrap="true" colour="blue"></Label>
+    <ListView *ngIf="items.length > 0" [items]="items" class="list-group">
+      <ng-template let-item="item">
+        <Label #nameUUID [text]="item" class="list-group-item" (tap)="saveUuid(nameUUID)"></Label>
+      </ng-template>
+    </ListView>
+  <StackLayout orientation="horizontal">
+    <Label id="lbl2" text="RUN AND ACCEPT THE TERMS: " textWrap="true" class="label"margin="25" width="240"></Label>
+    <Switch checked="{{ bool2 }}" [(ngModel)]="bool" (checkedChange)="onCheckedChange($event)" isEnabled="{{ isCompleted }}" class="switch" margin="1" width="100"></Switch>
+  </StackLayout>
+  <ActivityIndicator [busy]="isBusy"></ActivityIndicator>
+  <Button class="btn btn-primary btn-active" isEnabled="{{ isCompleted }}" id="button3" [text]="pumpStan" (tap)="stop()" (longPress)="onLongPress($event)" [ngStyle]="{ 'background-color': color }"></Button>
+  <ScrollView orientation="vertical" row="1" col="0" height="600" backgroundColor="blue">
+    <StackLayout>
+      <Label id="lbl3" class="h3 p-15" [text]="pumpData" textWrap="true" style="color:white;" ></Label>
+    </StackLayout>
+  </ScrollView>
+</StackLayout>
+</ScrollView>
+

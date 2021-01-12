@@ -1,0 +1,44 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="Your Nightscout site and API"></Label>
+</ActionBar>
+<ScrollView>
+<StackLayout class="page page-content">
+    <StackLayout col="0">
+    <TextField #nsUrl class="input input-border"
+               autocorrect="false" hint="https://yoursite.herokuapp.com"
+               [text]="nsUrl2" returnKeyType="done" (textChange)="setNS(nsUrl)">
+    </TextField>
+    </StackLayout>
+    <StackLayout>
+    <TextField #nsKey class="input input-border" autocorrect="false" hint="api_secret" [text]="nsKey2" returnKeyType="done" textWrap="true" (textChange)="setNSurl(nsKey)"></TextField>
+    </StackLayout>
+    <StackLayout>
+        <Button class="btn btn-primary btn-active" id="button" text="SAVE" (tap)="Zapisz()"></Button>
+    </StackLayout>
+    <Label id="lbl2" text="" textWrap="true" textAlignment="center" class="label" margin="1" width="300"></Label>
+    <StackLayout orientation="horizontal">
+
+        <Label id="lbl2" text="ENABLE AUTO STOP PUMP" textWrap="true" textAlignment="center" class="p-15" margin="1" width="240"></Label>
+        <Switch checked="{{ auto }}" (checkedChange)="onCheckedChangeAuto($event)" class="switch" margin="1" width="100"></Switch>
+    </StackLayout>
+    <StackLayout>
+        <Button class="btn btn-primary btn-active" id="button3" [text]="rangeText" (tap)="getBGRange()" isEnabled="{{ auto }}" ></Button>
+    </StackLayout>
+    <StackLayout orientation="horizontal">
+        <Label id="lbl3" text="BG SOURCE: PUMP / NS" textWrap="true" textAlignment="center" class="p-15" margin="1" width="240"></Label>
+        <Switch checked="{{ bgSource }}" (checkedChange)="onCheckedChangeSource($event)" class="switch" margin="1" width="100"></Switch>
+
+    </StackLayout>
+    <StackLayout>
+        <Button class="btn btn-primary btn-active" id="button4" [text]="phoneN" (tap)="setPhoneNumber()"></Button>
+    </StackLayout>
+    <StackLayout>
+        <Button class="btn btn-primary btn-active" id="button2" text="SEND LOGS" (tap)="sendLogs()"></Button>
+    </StackLayout>
+    <ScrollView orientation="vertical" row="1" col="0" height="500" backgroundColor="blue">
+    <StackLayout>
+        <Label id="lbl" class="action-bar-title" [text]="slowo" textWrap="true" style="color:white;" ></Label>
+    </StackLayout>
+    </ScrollView>
+</StackLayout>
+    </ScrollView>
