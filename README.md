@@ -1,3 +1,14 @@
+Mobile application in early implementation to work with remote control to Medtronic Veo and 722 insulin pump 
+
+https://github.com/sarunia/Med-Link-v4 english wersion firmware
+
+https://github.com/sarunia/Med-Link-v5 english version firmware
+
+
+Currently Android only
+Only for TESTER and education
+
+
 By running this code, you acknowledge and agree that:
 1) The product is not an approved medical device, it is only a research and support tool for patients with diabetes;
 2) The Product is made available and used solely for information and training purposes;
