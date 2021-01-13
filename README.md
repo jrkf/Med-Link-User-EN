@@ -5,8 +5,7 @@ https://github.com/sarunia/Med-Link-v4 english wersion firmware
 https://github.com/sarunia/Med-Link-v5 english version firmware
 
 
-Currently Android only
-Only for TESTER and education
+Currently Android only for TESTER and education
 
 
 By running this code, you acknowledge and agree that:
