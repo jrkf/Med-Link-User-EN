@@ -355,7 +355,7 @@ export class BrowseComponent implements OnInit, OnDestroy {
           "5) Failure to protect the Product against damage or destruction of the Product;\n" +
           "6) Discharge of the Product or other connected equipment;\n" +
           "7) Problems with other equipment connected to the Product;\n" +
-          "8) Communication problems between the Product and other connected equipment.\n" +
+          "8) Communication problems between the Product and other connected equipment.\n",
         okButtonText: "I confirm",
         cancelButtonText: "Cancel"
       }).then(result => {
