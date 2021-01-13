@@ -324,41 +324,40 @@ export class BrowseComponent implements OnInit, OnDestroy {
     if (isChecked === true) {
       dialogs.confirm({
         title: "Statement",
-        message: "Przyjmuję do wiadomości i wyrażam zgodę, że:\n" +
-          "1) Produkt nie stanowi zatwierdzonego wyrobu medycznego, stanowi jedynie narzędzie\n" +
-          "badawcze i pomocnicze dla pacjentów z cukrzycą;\n" +
-          "2) udostępnienie i korzystanie z Produktu następuje wyłącznie w celach informacyjnych i\n" +
-          "szkoleniowych;\n" +
-          "3) Produkt jest dostarczany bez jakiejkolwiek gwarancji (wyrażonej ani domniemanej);\n" +
-          "4) oprogramowanie zawarte w Produkcie działa na licencji open source, a korzystanie z\n" +
-          "Produktu nie wymaga ponoszenia jakichkolwiek opłat lub wynagrodzenia, w tym na rzecz\n" +
-          "podmiotów uprawnionych do oprogramowania;\n" +
-          "5) oprogramowanie zawarte w Produkcie nie zostało zatwierdzone przez żadnego producenta;\n" +
-          "6) Produkt może nie działać nieprzerwanie, terminowo, bezpiecznie i bezbłędnie;\n" +
-          "7) Produkt może nie współdziałać z innymi oprogramowaniami lub innymi sprzętami;\n" +
-          "8) wyniki uzyskane z związku z korzystaniem Produktu mogą nie być dokładne i rzetelne;\n" +
-          "9) nie posiadam żadnych praw własności ani udziałów w Produkcie;\n" +
-          "10) będę korzystać z Produktu tylko i wyłącznie na moje własne ryzyko i własną\n" +
-          "odpowiedzialność;\n" +
-          "11) będę korzystać z Produktu tylko i wyłącznie do osobistego użytku;\n" +
-          "12) nie będę używać ani polegać na Produkcie przy podejmowaniu jakichkolwiek decyzji o\n" +
-          "charakterze medycznym, decyzji związanych z leczeniem, jak również nie będę używać\n" +
-          "Produktu jako substytutu dla profesjonalnej opieki medycznej;\n" +
-          "13) zobowiązuję się ponieść wszelkie koszty naprawy lub serwisu Produktu.\n" +
-          "Oświadczam, że nie będę dochodzić wobec twórców Produktu jakichkolwiek roszczeń z tytułu\n" +
-          "nieprawidłowego działania lub korzystania z Produktu, w tym w szczególności nie będę dochodzić\n" +
-          "roszczeń dotyczących szkód powstałych w wyniku:\n" +
-          "1) nieprawidłowego korzystania z Produktu;\n" +
-          "2) braku sprawności lub ograniczenia sprawności Produktu, błędów i uszkodzeń Produktu,\n" +
-          "opóźnień w jego działaniu;\n" +
-          "3) niestosowania się do zasad działania Produktu;\n" +
-          "4) niewłaściwego przechowywania Produktu;\n" +
-          "5) braku zabezpieczenia Produktu przed uszkodzeniami, zniszczeń Produktu;\n" +
-          "6) rozładowania się Produktu lub innych sprzętów z nim połączonych;\n" +
-          "7) problemów z innymi sprzętami połączonymi z Produktem;\n" +
-          "8) problemów komunikacyjnych pomiędzy Produktem a innymi sprzętami z nim połączonymi.",
-        okButtonText: "Potwierdzam",
-        cancelButtonText: "Anuluj"
+        message: "I agree and acknowledge that:\n" +
+          "1) The product is not an approved medical device, it is only a research\n" +
+          "and support tool for patients with diabetes;\n" +
+          "2) The Product is made available and used solely for information \n" +
+          "and training purposes;\n" +
+          "3) The product is provided without warranty of any kind (expressed or implied);\n" +
+          "4) The software contained in the Product operates under an open source license,\n" +
+          "and the use of the Product does not require any fees or remuneration,\n" +
+          "including for the benefit of entities entitled to the software;\n" +
+          "5) The software included in the Product has not been approved by any manufacturer;\n" +
+          "6) The product may not work continuously, on time, safely and without errors;\n" +
+          "7) The product may not work with other software or other hardware;\n" +
+          "8) The results obtained in connection with the use of the Product may not be accurate and reliable;\n" +
+          "9) I don't have any property rights or shares in the Product;\n" +
+          "10) I will use the Product only at my own risk and responsibility;\n" +
+          "11) I will use the Product only for my personal use;\n" +
+          "12) I will not use or rely on the Product to make any medical decisions, \n" +
+          "decisions related to treatment, and I will not use the Product as\n" +
+          "a substitute for professional medical care;\n" +
+          "13) I undertake to bear all the costs of the Product repair or service.\n" +
+          "Additionally, declares that I will not pursue any claims against the authors of the\n" +
+          "Product for improper operation or use of the Product, including, in particular,\n" +
+          "I will not pursue claims for damages resulting from:\n" +
+          "1) Improper use of the Product;\n" +
+          "2) Lack of efficiency or reduced efficiency of the Product, errors and damage to the Product,\n" +
+          "delays in its operation;\n" +
+          "3) Failure to comply with the rules of the Product's operation;\n"+
+          "4) Improper storage of the Product;\n" +
+          "5) Failure to protect the Product against damage or destruction of the Product;\n" +
+          "6) Discharge of the Product or other connected equipment;\n" +
+          "7) Problems with other equipment connected to the Product;\n" +
+          "8) Communication problems between the Product and other connected equipment.\n" +
+        okButtonText: "I confirm",
+        cancelButtonText: "Cancel"
       }).then(result => {
         if (result === true) {
           this.setPermissions();

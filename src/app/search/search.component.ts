@@ -148,7 +148,7 @@ export class SearchComponent implements OnInit {
       console.log(this.slowo + "aRRRRRRRRRR")
     );
     if (
-      this.nsUrl.substring(0, 8).toUpperCase() !== "HTTP" ||
+      this.nsUrl.substring(0, 4).toUpperCase() !== "HTTP" ||
       this.nsUrl.substring(this.nsUrl.length - 1, this.nsUrl.length) === "/"
     ) {
       this.slowo2 = "INCORRECT URL!";
